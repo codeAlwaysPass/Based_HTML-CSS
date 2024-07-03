@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--controls是布尔属性, 要么就写false, 要么就写属性名的字符串， 要么只写属性不写= -->
+    <!-- muted代表静音播放, loop表示循环播放 -->
+    <video src="./media/open.mp4" style="width: 500px;" controls autoplay muted loop></video>
+
+    <!-- 为了兼容浏览器, 可以书写多个格式 -->
+     <video>
+        <source>
+        <source>
+        <p>
+            对不起, 你的浏览器不支持。
+        </p>
+     </video>
+</body>
+</html>

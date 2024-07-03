@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        color: red;
+      }
+
+      a {
+        text-decoration: none;
+        /*强制继承, 关键词inherit, 因为继承发生在冲突之后, 所以有时需要强制继承 */
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- a不会继承红色, p会继承 -->
+    <!-- 因为p元素默认的声明值没有颜色, 但是a元素有 -->
+    <div>
+      <a href="">a元素</a>
+      <p>p元素</p>
+    </div>
+  </body>
+</html>

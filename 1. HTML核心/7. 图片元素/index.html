@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- alt: 当图片资源失效时, 将使用该属性的文字替代 -->
+    <img src="./img/solar.jpg" alt="" />
+
+    <!-- img元素经常和a元素联用 -->
+    <a href="https://www.taobao.com">
+      <img src="./img/solar.jpg" alt="" />
+    </a>
+
+    <!-- 如果想要点击图片某个特定的区域触发特点效果, 要使用map元素 -->
+    <!-- 也可以使用矩形、多边形的area -->
+    <img usemap="#solarMap" src="./img/solar.jpg" />
+    <map name="solarMap">
+      <area
+        shape="circle"
+        coords="360,204,48"
+        href="https://www.baidu.com"
+        alt=""
+        target="_blank"
+      />
+    </map>
+
+    <!-- 为了语义化, img和figure联用 -->
+    <figure>
+      <img usemap="#solarMap" src="./img/solar.jpg" />
+      <map name="solarMap">
+        <area
+          shape="circle"
+          coords="360,204,48"
+          href="https://www.baidu.com"
+          alt=""
+          target="_blank"
+        />
+      </map>
+      <figcaption><h2>太阳系</h2></figcaption>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
+        necessitatibus!
+      </p>
+    </figure>
+  </body>
+</html>

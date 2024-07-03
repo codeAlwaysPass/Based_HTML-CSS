@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        border-bottom: 1px dashed #ccc;
+        line-height: 2;
+        border-left: 3px solid #008c8c;
+        padding-left: 10px;
+        /*写两个代表上下和左右*/
+        margin: 1em 0;
+        width: 200px;
+        /*空白处理组合拳：先使用whitespace的nowrap表示不能换行，
+        然后隐藏溢出，再设定溢出部分的文字为... (!!!注意只能处理单行文本多行需要用js代码)*/
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Iusto id suscipit dolorum libero.</li>
+      <li>Sed laboriosam deserunt perspiciatis aliquid.</li>
+      <li>Quam tenetur iste doloribus dolores.</li>
+      <li>Magnam enim deserunt quaerat necessitatibus.</li>
+      <li>Delectus quas accusantium unde aperiam?</li>
+      <li>Officiis voluptate quisquam repellendus soluta!</li>
+      <li>Voluptatem sit totam velit dolores!</li>
+      <li>Consectetur, nisi? Fugiat, eveniet numquam.</li>
+      <li>Facilis laborum id ipsum vero.</li>
+    </ul>
+  </body>
+</html>

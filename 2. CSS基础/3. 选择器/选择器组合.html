@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        text-indent: 2em;
+        line-height: 2;
+      }
+      p.red {
+        color: red;
+      }
+
+      .list li {
+        color: #008c8c;
+      }
+
+      .abc > .bcd {
+        color: antiquewhite;
+      }
+
+      .a + li {
+        color: #ff4400;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil quis,
+      dolores est corrupti consequuntur sit, assumenda adipisci impedit commodi
+      sequi, expedita asperiores? Eligendi a dolorem nobis? Amet omnis
+      architecto deleniti.
+    </p>
+    <p class="red">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+      repellendus nesciunt possimus sapiente ipsa eos vero nostrum ut tempore
+      sed!
+    </p>
+    <div class="list">
+      <ul>
+        <li>Lorem.</li>
+        <li class="a">Mollitia?</li>
+        <li>Animi.</li>
+        <li>Nemo.</li>
+        <li>Fuga.</li>
+      </ul>
+    </div>
+
+    <div class="abc">
+      <p>Lorem.</p>
+      <p class="bcd">Velit!</p>
+      <p>Delectus?</p>
+    </div>
+
+    <p class="bcd"></p>
+  </body>
+</html>

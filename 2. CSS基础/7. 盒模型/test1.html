@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h1{
+            /*width,height是content的宽高, 又称内容盒*/
+            width: 100px;
+            height: 600px;
+            /*padding顺序 上右下左 或一个代表四个 或 两个代表上下和左右*/
+            padding:50px 30px 50px 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- h1,p,div浏览器设定display属性都是block, 是块盒 -->
+    <!-- 像span这种没设定的,  默认是inline, 是行盒-->
+    <h1>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+      provident, pariatur voluptas sed exercitationem reprehenderit saepe dolor
+      architecto commodi deleniti quibusdam dolorum dicta accusantium assumenda
+      explicabo fugit sunt maxime molestias.
+    </h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+      molestias nam sint dolores, dolorum perspiciatis qui temporibus debitis
+      possimus sunt! Amet praesentium totam perferendis velit. Delectus eveniet
+      deserunt dolore alias!
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, error
+      animi sit quo ut eos suscipit quis, libero magni qui reprehenderit
+      laboriosam consectetur vel aut laborum, tenetur aliquam praesentium
+      delectus.
+    </div>
+    <div>
+      <span>Lorem.</span><span>Officiis.</span><span>Officia?</span
+      ><span>Porro.</span><span>Quibusdam!</span><span>Earum.</span
+      ><span>Vero.</span><span>Hic.</span><span>Nostrum!</span
+      ><span>Totam?</span>
+    </div>
+  </body>
+</html>

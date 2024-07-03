@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ff4400;
+            /*边框默认样式为none,如果没有指定样式, 设定了宽度也没用*/
+            /*边框也可以使用上右下左设定宽度*/
+            border-width: 4px;
+            border-style:solid;
+            border-color: black;
+
+            /*内边距，边框和内容盒的距离*/
+            padding:50px;
+        }
+
+        .div1{
+            /*外边距，代表边框和其他盒子的距离*/
+            margin:10px 20px 10px 20px
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>
