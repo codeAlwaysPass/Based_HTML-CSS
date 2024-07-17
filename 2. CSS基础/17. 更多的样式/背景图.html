@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border:2px solid;
+            background-image: url("imgs/main_bg.jpg");
+            background-size: 400px 200px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+        body{
+            /*背景图默认情况下会在横坐标和纵坐标中进行重复*/
+            background-image: url("imgs/target.ico");
+            /*背景图相对于视口*/
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

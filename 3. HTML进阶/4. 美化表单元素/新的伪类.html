@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        color: #999;
+      }
+
+      input:focus {
+        /*取消聚焦时候的外边框*/
+        outline: none;
+        outline-offset: 0;
+      }
+
+      /*input的checked要和label结合使用*/
+      input:checked+label{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- tabindex决定了按tab时聚焦的顺序 -->
+    <p><a tabindex="2" href="">Lorem.</a></p>
+    <p>
+      <input tabindex="1" type="text" />
+    </p>
+
+    <p>
+      <button tabindex="3" type="submit">提交</button>
+    </p>
+
+    <p>
+      <input type="radio" name="gender" id="radmale" />
+      <label for="radmale">男</label>
+      <input type="radio" name="gender" id="radfemale" />
+      <label for="radfemale">女</label>
+    </p>
+  </body>
+</html>

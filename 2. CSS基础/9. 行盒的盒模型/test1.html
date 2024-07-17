@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,span{
+            background:lightblue;
+            border:2px solid;
+            line-height: 2;
+        }
+
+        /*padding只会改变背景,但垂直方向不占据空间, border也一样*/
+        .s1{
+            padding:10px;
+            border:10px solid;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium atque eveniet inventore unde ducimus porro cupiditate temporibus, cum suscipit quo iure impedit odit maiores corrupti dolore ad. Aperiam, libero ratione.</p>
+
+    <!-- span的行盒换行时会被截断 -->
+    <span class="s1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat aut molestias natus nulla perferendis odio, deserunt delectus dolores facilis hic accusantium, pariatur iste voluptatibus tenetur sed et earum vel reiciendis?</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestias aperiam dolores, non commodi tenetur exercitationem modi eum enim delectus quo aliquid ut, consequuntur sit nostrum placeat adipisci eos illo.</span>
+</body>
+</html>

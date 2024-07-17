@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background: lightblue;
+        padding: 30px;
+      }
+
+      .item {
+        width: 200px;
+        height: 200px;
+        float: left;
+        background: red;
+        margin: 6px;
+      }
+
+      /*这个div因为出现在了所有浮动盒子的下方，直接撑开了整个容器
+      缺点是要额外制造一个空元素*/
+      /*.clearfix {
+        height: 60px;
+        background: blue;
+        clear: both;
+      }*/
+
+      /*可以用一个伪元素来撑开，必须设置content为空，display为block*/
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 常规流盒子在计算内容高度时，会忽略浮动流盒子，就造成了高度坍塌 -->
+    <!-- 解决方法：清除浮动(并不是不浮动了) -->
+    <div class="container clearfix">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <!-- 专门用来清除浮动 -->
+      <!-- <div class="clearfix"></div> -->
+    </div>
+  </body>
+</html>

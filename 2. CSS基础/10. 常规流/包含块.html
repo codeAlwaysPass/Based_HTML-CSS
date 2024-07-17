@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        background: lightblue;
+        height: 200px;
+        border: 2px solid;
+        padding: 30px;
+        margin:30px;
+      }
+
+      .child {
+        border: 2px solid;
+        width: 100px;
+        height: 100px;
+        background: red;
+        /*常规的居中方案之一：设定宽度，左右margin设auto*/
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- parent的父元素是body -->
+    <div class="parent">
+      <!-- 此时child的宽度(加上border)自动是parent内容盒的宽度，也就是300px -->
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

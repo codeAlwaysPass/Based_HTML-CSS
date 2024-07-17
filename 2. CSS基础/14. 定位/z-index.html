@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*此时五个div会重合在一起*/
+      /*只有定位元素设定z-index有效*/
+      .item {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border: 5px solid;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+
+      .circle1 {
+        left: 0;
+        top: 0;
+        border-color: blue;
+      }
+
+      .circle2 {
+        /*z-index越大越靠近用户, 此时黑色圈在最外面*/
+        z-index: 100;
+        left: 70px;
+        top: 0;
+        border-color:black;
+      }
+
+      .circle3 {
+        left: 140px;
+        top: 0;
+        border-color:red;
+      }
+
+      .circle4 {
+        left: 35px;
+        top: 50px;
+        border-color:yellow;
+      }
+
+      .circle5 {
+        z-index: 50;
+        left: 105px;
+        top: 50px;
+        border-color:green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item circle1"></div>
+    <div class="item circle2"></div>
+    <div class="item circle3"></div>
+    <div class="item circle4"></div>
+    <div class="item circle5"></div>
+  </body>
+</html>
