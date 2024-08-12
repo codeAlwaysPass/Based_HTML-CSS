@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-image: conic-gradient(skyblue,#ff0,skyblue);
+            border-radius: 50%;
+        }
+
+        .box1{
+            animation:rotate 2s linear;
+        }
+
+        .box2{
+            animation:rotate 2s linear;
+            /*设定动画执行的方向*/
+            animation-direction: reverse;
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

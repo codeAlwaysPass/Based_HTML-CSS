@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background: #008c8c;
+        height: 500px;
+        margin-top: 30px;
+        /*在没有设定BFC前，container和child在外边距上是合并的*/
+        /*没有BFC导致合并的时候，child不会和container的上边框相距50px，而是紧贴*/
+        overflow: hidden;
+      }
+
+      .child {
+        height: 100px;
+        margin: 50px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>

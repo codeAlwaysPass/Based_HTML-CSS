@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+            border: 2px dashed #fac;
+            margin:0 auto;
+            background-image: url('./assets/chai.webp');
+            /*指定不重复，space属性代表留有空隙的情况下尽可能填满*/
+            background-repeat: no-repeat;
+            /*设置图片的偏移量(水平，垂直), 如果少填写, 缺少的值默认为center 
+            (支持写px, right/left/top/bottom, center)*/
+            /*也可以是(方向,偏移量), 比如background-position:right 0 top 0*/
+            /*background-position: 20px 40px;*/
+            background-position: top 0 right 0;
+            /*定位的参照物 (padding-box, content-box等)*/
+            background-origin: padding-box;
+            /*决定图片的尺寸(cover,content), cover指图片尽可能完全覆盖*/
+            background-size: content;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

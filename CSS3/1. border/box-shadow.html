@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #ff4400;
+            margin: 0 auto;
+            /*box-shadow:(是否为内阴影 水平偏移量 垂直偏移量 模糊半径 扩张半径 阴影颜色)
+            刚刚这样的配置可以重复叠加，设置多层阴影*/
+            box-shadow: inset 0px 0px 0 10px #ccc, 0px 0px 20px #fcc;
+        }
+
+        .water{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            border-radius: 34% 66% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: inset 10px 10px 20px rgba(0,0,0,.2), 
+            inset -20px -20px 20px rgba(255,255,255,.5),
+            15px 15px 20px rgba(0,0,0,.3);
+        }
+
+        .water::before{
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 44% 56% 52% 48% / 43% 38% 62% 57%;
+            top:20%;
+            left:40%
+        }
+
+        .water::after{
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 44% 56% 52% 48% / 43% 38% 62% 57%;
+            top: 20%;
+            left:10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="water"></div>
+</body>
+</html>

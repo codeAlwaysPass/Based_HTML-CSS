@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 400px auto;
+            background-color: red;
+            transform-origin: center -800px;
+            border-radius: 200px;
+            transform: rotate(45deg);
+            animation: rotate 2s ease-in-out infinite forwards;
+            /*用动画运行的第一帧作为初始位置*/
+            animation-fill-mode: backwards;
+            /*决定动画播放还是暂停*/
+            animation-play-state: running;
+        }
+
+        /*除了!important之外，动画优先级最高*/
+        @keyframes rotate {
+            0%, 100%{
+                transform: rotate(30deg);
+            }
+            50%{
+                transform:rotate(-30deg)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

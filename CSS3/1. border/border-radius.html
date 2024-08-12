@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #fac;
+            /*是border-top-left-radius,border...的合写(左上右上左下右下)*/
+            border-radius: 50%; /*或者这里写同等的宽度200px*/
+            /* border-radius: a b c d / e f g h
+            缩小系数f = min(width/a+b, width/c+d, height/e+f, height/g+h)
+            */
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: #ff4400;
+            /*border-top-left-radius这样的单一熟悉可以接收两个参数，
+            每个角可以有水平半径和垂直半径*/
+            border-top-left-radius: 40px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>

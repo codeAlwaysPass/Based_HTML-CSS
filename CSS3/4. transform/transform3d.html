@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*transform3d的坐标系也是3d的*/
+        /*perspective的设定位置不同，不同位置的其他元素的样子也不同
+        因为观察的点相对于每一个元素的位置都是不一样的*/
+        /*perspective调整的其实就是眼睛的位置*/
+        .parent{
+            perspective: 1000px;
+            perspective-origin: center center;
+            /*让元素真正的3d扁平化,
+            此时box1往里转就会穿过box*/
+            transform-style: preserve-3d;
+        }
+        .box{
+          width: 200px;
+          height: 200px;
+          position: absolute;
+          background-color: #fac;
+          /*眼睛到屏幕的距离是透视距离，默认无穷大
+          使用perspective设定透视距离，
+          设定了透视距离后，就能使用translateZ实现近大远小了*/
+          /*transform: translateZ(-1000px);*/
+          /*transform:rotateX(45deg) ; /*设定了perspective后，可以实现明显的3d旋转；
+          不设定的话更像是2d的效果*/
+        }
+
+        .box1{
+            background-color: #fca;
+            transform: rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box"></div>
+        <div class="box  box1"></div>
+    </div>
+</body>
+</html>

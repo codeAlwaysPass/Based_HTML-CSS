@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        animation: colorChange 2s linear infinite paused;
+      }
+
+      .box:hover {
+        animation-play-state: running;
+      }
+
+      @keyframes colorChange {
+        0%,
+        100% {
+          background-color: skyblue;
+        }
+
+        30% {
+          background-color: #f00;
+        }
+
+        60% {
+          background-color: #00f;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script>
+      const box = document.querySelector(".box");
+      box.onanimationstart = function () {
+        console.log("动画开始了");
+      };
+
+      box.onanimationend = function () {
+        //设置infinite动画时不会触发
+        console.log("动画结束了");
+      };
+
+      box.onanimationcancel = function () {
+        console.log("动画被取消");
+      };
+
+      box.onanimationiteration = function () {
+        console.log("当完成一次动画后触发");
+      };
+    </script>
+  </body>
+</html>

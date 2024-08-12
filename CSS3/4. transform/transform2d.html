@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*transform2d根据坐标系变化，x轴向左，y轴向下
+        当元素变换时，坐标轴也会变换*/
+      .box {
+        width: 200px;
+        height: 200px;
+        margin: 200px auto 0;
+        background-color: #fac;
+        /*在x轴方向平移 (可以写px或百分比，百分比相对于自己的宽度或高度)*/
+        /*对于**同一次变换**每次使用translate后，坐标系原点也会跟着移动，这里原点就移动了两次*/
+        transform: scale(1);
+        /*使用scale缩放, 如果设置为负数，代表沿着x或y轴进行翻转*/
+        /*其他属性还有旋转、倾斜等*/
+
+        /*过渡*/
+        transition:all .2s;
+      }
+
+      .box1 {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: #fca;
+      }
+
+      .box:hover{
+        transform: scale(.8);
+      }
+
+      .box2{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: #cca;
+        /*改变原点*/
+        transform-origin: left top;
+        transform:rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+  </body>
+</html>

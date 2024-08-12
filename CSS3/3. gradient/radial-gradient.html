@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            /*圆心：位置
+            半径：渐变半径
+            形状：圆形 椭圆*/
+            background-image: radial-gradient(50px circle at center,red,blue);
+        }
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-image: repeating-radial-gradient(skyblue 0 10px,transparent 10px 20px);  
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+</body>
+</html>

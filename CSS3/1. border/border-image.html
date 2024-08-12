@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*border-image通过图片来增强border的表现力*/
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #fca;
+            border:20px solid #fac;
+            /*border-image: url('./solar.jpg') 33.3;*/
+            /*引入图片*/
+            border-image-source:url('./solar.jpg');
+            /*border-image的那张图会被划分为九宫格，slice指定划分的位置*/
+            border-image-slice:33.3% 33.3%;
+            /*border-image-width设置图片的大小, 向内卷*/
+            border-image-width: 15px;
+            /*设置向外展的宽度*/
+            border-image-outset: 20px;
+            /*设置缝隙*/
+            border-image-repeat:space ;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

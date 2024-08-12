@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .flex-box {
+        width: 500px;
+        height: 200px;
+        background: #ff0;
+        display: flex;
+      }
+
+      .flex-item{
+        /*在弹性容器内，块盒水平排列，数量多的时候会发生压缩*/
+        width: 100px;
+        /*如果不设置高度，高度会自动撑开父级容器*/
+        height: 100px;
+        background: #008c8c;
+        /*弹性容器内，margin是生效的*/
+        /*margin: 10px;*/
+      }
+
+      .flex-item:nth-of-type(2){
+        /*可以实现居中，剩下的会自动分配父元素的剩余空间*/
+        margin: 0 auto;
+      }
+
+      /*浮动在flex容器内不生效*/
+
+      /*在弹性盒中使用定位会脱离弹性盒的约束*/
+
+      /*弹性盒内的弹性项目默认沿着主轴方向排列*/
+    </style>
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
+</html>

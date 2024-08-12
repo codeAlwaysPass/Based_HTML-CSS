@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /*防止变化太生硬，使用transition进行过渡
+            transition是一个合写的属性*/
+            /*transition: 1s;*/
+            /*规定哪些属性进行过渡*/
+            transition-property: background-color,width;
+            /*设定过渡的时间*/
+            transition-duration: .5s,1s;
+            /*过渡的效果,linear,steps等*/
+            transition-timing-function: steps(10);
+            /*延迟的时间,为负值就会提前*/
+            transition-delay: 1s;
+        }
+
+        .box:hover{
+            width: 300px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

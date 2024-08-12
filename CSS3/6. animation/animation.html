@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            /*在animation中使用定义的动画，animation也是
+            一个合写的属性*/
+            animation:change 2s linear;
+        }
+
+        /*通过@keyframes定义一个动画名称*/
+        @keyframes change{
+            /*from to相当于0%和100%*/
+            from{
+                background-color: #f00;
+            }
+            50%{
+                background-color: aliceblue;
+            }
+            to{
+                background-color: #ff0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

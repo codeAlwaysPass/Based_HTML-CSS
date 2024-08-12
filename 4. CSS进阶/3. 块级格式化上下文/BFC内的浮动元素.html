@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: lightblue;
+            /*现在可以创建BFC来解决高度坍塌的问题*/
+            /*position: absolute; 设定绝对定位*/
+            /*float: left; 设定浮动*/
+            /*前两种方式会影响到前面的布局，不推荐使用；推荐使用副作用
+            最小的方式，更改overflow*/
+            overflow: hidden; /*副作用最小的overflow可以设定hidden*/
+        }
+
+        /*若不是BFC，解决高度坍塌需要使用伪元素；但如果仅仅是想解决高度坍塌，
+        还是推荐使用清除浮动*/
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear:both;
+        }
+
+        .item{
+            float:left;
+            background: red;
+            height: 200px;
+            width: 200px;
+            margin:20px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

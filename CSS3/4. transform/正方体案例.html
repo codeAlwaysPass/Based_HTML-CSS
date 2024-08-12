@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .wrapper{
+        perspective: 800px;
+      }
+
+      .content{
+        transform-style: preserve-3d;
+        width: 400px;
+        height: 400px;
+        margin:400px auto;
+        transform: rotateY(45deg);
+      }
+
+      .content li{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        line-height: 400px;
+        text-align: center;
+        font-size: 64px;
+        color:#fff;
+      }
+
+      .front{
+        background-color: #faca;
+        transform: translateZ(200px);
+      }
+
+      .back{
+        background-color: #fcaa;
+        /*背面是正面翻转的*/
+        transform: rotateY(180deg) translateZ(200px);
+      }
+
+      .left{
+        background-color: #cfaa;
+        transform: rotateY(90deg) translateZ(200px);
+      }
+
+      .right{
+        background-color: #cfaa;
+        transform: rotateY(-90deg) translateZ(200px);
+      }
+
+      .top{
+        background-color: #ffaa;
+        transform:rotateX(90deg) translateZ(200px);
+      }
+
+      .bottom{
+        background-color: #fcca;
+        transform: rotateX(-90deg) translateZ(200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="content">
+        <li class="front"></li>
+        <li class="back"></li>
+        <li class="left"></li>
+        <li class="right"></li>
+        <li class="top"></li>
+        <li class="bottom"></li>
+      </ul>
+    </div>
+  </body>
+</html>

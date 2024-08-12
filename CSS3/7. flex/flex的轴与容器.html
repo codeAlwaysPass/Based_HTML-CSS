@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        .flex-box{
+            width: 500px;
+            height: 500px;
+            border:3px dashed #f0f;
+            display: flex;
+            /*可以调整排序方式,col,row,col-reverse...
+            默认按row排序*/
+            /*flex-direction: row;
+            /*可以规定是否换行
+            flex-wrap:wrap;*/
+            
+            /*direction和wrap的集合体*/
+            flex-flow: row wrap;
+
+            /*规定在主轴方向的排列顺序,有各种排列的组合*/
+            /*justify-content: space-evenly;*/
+
+            /*也可以修改交叉轴的对齐方式*/
+            /*align-items: flex-start;*/
+            align-items: baseline;
+
+            /*针对的是每一行的排列方式(前提是必须有多行)
+            其实就是把每一行看成一个元素*/
+            align-content: space-evenly;
+        }
+
+        .flex-item{
+            width: 100px;
+            height: 100px;
+            background-color: #0ff;
+        }
+
+        .box2{
+            width: 500px;
+            height: 500px;
+            border:3px dashed #f0f;
+            display: flex;
+            /*实现单个元素的居中*/
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+    <div class="box2">
+        <div class="item"></div>
+    </div>
+</body>
+</html>
